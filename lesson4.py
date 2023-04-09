@@ -1,5 +1,7 @@
 a = 4
 b = 3
+
+
 def printMax():
     if a > b:
         print(a, 'is maximum')
@@ -13,6 +15,7 @@ x = 23.1
 f = 23.2
 d = 22.9
 
+
 def printMin():
     if f > x > d:
         print(d, 'is minimum')
@@ -23,6 +26,7 @@ def printMin():
 
 
 y = 28
+
 
 def example(y):
     return max(-y, y)
@@ -46,14 +50,3 @@ def my_func2(n):
 
 
 print(my_func2(n))
-
-
-
-
-
-
-
-
-
-
-
