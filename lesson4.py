@@ -17,10 +17,8 @@ d = 22.9
 def minimum(f, x, d):
     if f > x > d:
         return d
-    elif f > x < d:
+    else d < f > x:
         return x
-    else:
-        return f
 
 
 y = 28
