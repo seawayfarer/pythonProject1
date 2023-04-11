@@ -2,13 +2,11 @@ a = 4
 b = 3
 
 
-def printMax():
+def maximum(a, b):
     if a > b:
-        print(a, 'is maximum')
-    elif a == b:
-        print(a, 'is equal to', b)
+        return a
     else:
-        print(b, 'is maximum')
+        return b
 
 
 x = 23.1
@@ -16,37 +14,37 @@ f = 23.2
 d = 22.9
 
 
-def printMin():
+def minimum(f, x, d):
     if f > x > d:
-        print(d, 'is minimum')
-    elif f > x <= d:
-        print(f, 'is maximum')
+        return d
+    elif f > x < d:
+        return x
     else:
-        print(x, 'is minimum')
+        return f
 
 
 y = 28
 
 
-def example(y):
+def modul(y):
     return max(-y, y)
 
 
-def my_func1(g, h):
+def addition(g, h):
     return g + h
 
 
-print(my_func1(8, 12))
+print(addition(8, 12))
 
 
 n = 0.001
 
 
-def my_func2(n):
+def value_of_number(n):
     if n > 0:
         print('positive')
     elif n < 0:
         print('negative')
 
 
-print(my_func2(n))
+value_of_number(n)
