@@ -43,6 +43,8 @@ def value_of_number(n):
         print('positive')
     elif n < 0:
         print('negative')
+    else:
+        print(None)
 
 
 value_of_number(n)
