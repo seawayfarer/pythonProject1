@@ -47,4 +47,4 @@ def value_of_number(n):
         print(None)
 
 
-value_of_number(n)
+print(value_of_number(n))
