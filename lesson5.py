@@ -9,18 +9,9 @@ def unique_elements(*args):
 print(unique_elements(1, 2, 3, 2, 4, 3, 5))
 
 
-def my_function(arg1, arg2, arg3=None, arg4=None, arg5=None):
-    result = arg1 + arg2
-    if arg3 is not None:
-        result *= arg3
-    if arg4 is not None:
-        result -= arg4
-    if arg5 is not None:
-        result += arg5
-    return result
-result1 = my_function(1, 2)
-result2 = my_function(1, 2, 3)
-result3 = my_function(1, 2, arg4=4, arg5=5)
+def my_function(arg1, arg2, /, arg3=None, *, arg4=None, arg5='default_value_1', arg6='default_value_2'):
+    pass
+
 
 
 
