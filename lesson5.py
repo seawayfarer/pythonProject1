@@ -9,6 +9,18 @@ def unique_elements(*args):
 print(unique_elements(1, 2, 3, 2, 4, 3, 5))
 
 
+def my_function(**kwargs):
+    num_args = len(kwargs)
+    user_type = kwargs.get("user_type", "Student")
+    print("Number of arguments:", num_args)
+    print("Тype of user :", user_type)
+my_function(name="Ivan", age=25, user_type="Able")
+my_function(name="Ivan", age=25)
+
+
+
+
+
 def my_function(arg1, arg2, /, arg3=None, *, arg4=None, arg5='default_value_1', arg6='default_value_2'):
     pass
 
@@ -28,10 +40,16 @@ def print_square(size, end_marker=None):
             print(end_marker)
         return
 
-    print('*' * size)
-    print_square(size - 1, end_marker)
+    if end_marker is None:
+        end_marker = size
 
-print_square(5, '---')
+    if end_marker == 0:
+        return
+
+    print('*' * size)
+    print_square(size, end_marker - 1)
+
+print_square(5, 3)
 
 
 
