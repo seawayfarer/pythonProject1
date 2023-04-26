@@ -13,9 +13,6 @@ def my_function(arg1, arg2, /, arg3=None, *, arg4=None, arg5='default_value_1', 
     pass
 
 
-
-
-
 def outer_func(num):
     def inner_func(num2):
         return num * num2
