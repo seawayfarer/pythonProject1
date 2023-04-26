@@ -18,9 +18,6 @@ my_function(name="Ivan", age=25, user_type="Able")
 my_function(name="Ivan", age=25)
 
 
-
-
-
 def my_function(arg1, arg2, /, arg3=None, *, arg4=None, arg5='default_value_1', arg6='default_value_2'):
     pass
 
