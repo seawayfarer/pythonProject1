@@ -17,7 +17,6 @@ def outer_func(num):
     def inner_func(num2):
         return num * num2
     return inner_func
-
 func = outer_func(5)
 result = func(10)
 print(result)
