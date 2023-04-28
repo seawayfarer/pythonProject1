@@ -30,18 +30,32 @@ import random
 import string
 import time
 
-PASSWORD_LENGTH = 4
-PASSWORD = 'AbCd'
-
 
 def generate_password():
-    chars = string.ascii_letters
-    return ''.join(random.choice(chars) for _ in range(PASSWORD_LENGTH))
+    password = ''.join(random.choices(string.ascii_letters, k=4))
+    return password
 
 
 def password_checker(password):
-    for real_pass_char, passed_pass_char in zip(PASSWORD, password):
+    real_password = 'FoUn' # Initial password for compare
+    start_time = time.time()
+    for real_pass_char, passed_pass_char in zip(real_password, password):
         if real_pass_char != passed_pass_char:
             return False
         time.sleep(0.1)
-    return True
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    if elapsed_time < 0.4:
+        return True
+    else:
+        return False
+
+
+#  Generate a random password and check it by password check function
+while True:
+    generated_password = generate_password()
+    if password_checker(generated_password):
+        print("success:", generated_password)
+        break
+    else:
+        print("Continue checking")
