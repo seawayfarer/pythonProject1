@@ -43,7 +43,7 @@ def password_checker(password):
         time.sleep(0.1)
     end_time = time.time()
     elapsed_time = end_time - start_time
-    if elapsed_time < 0.4:
+    if elapsed_time > 0.4:
         return True
     else:
         return False
