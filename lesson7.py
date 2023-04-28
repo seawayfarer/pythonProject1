@@ -30,14 +30,12 @@ import random
 import string
 import time
 
-
 def generate_password():
     password = ''.join(random.choices(string.ascii_letters, k=4))
     return password
 
-
 def password_checker(password):
-    real_password = 'FoUn' # Initial password for compare
+    real_password = 'LiLu' # Initial password for compare
     start_time = time.time()
     for real_pass_char, passed_pass_char in zip(real_password, password):
         if real_pass_char != passed_pass_char:
@@ -50,12 +48,19 @@ def password_checker(password):
     else:
         return False
 
+password = ''
+delay = 0.1
+for _ in range(4):
+    for symbol in string.ascii_letters:
+        start = time.time()
+        if password_checker(password + symbol):
+            password += symbol
+            delay += 0.1
+            break
+        end = time.time()
+        if end - start > delay:
+            password += symbol
+            delay += 0.1
+            break
 
-#  Generate a random password and check it by password check function
-while True:
-    generated_password = generate_password()
-    if password_checker(generated_password):
-        print("success:", generated_password)
-        break
-    else:
-        print("Continue checking...")
+print(f"Find password: {password}")
