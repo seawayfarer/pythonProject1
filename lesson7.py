@@ -58,4 +58,4 @@ while True:
         print("success:", generated_password)
         break
     else:
-        print("Continue checking")
+        print("Continue checking...")
