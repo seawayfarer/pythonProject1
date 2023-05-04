@@ -74,4 +74,5 @@ def analyze_file(file_path):
     return {'lines_count': lines_count, 'file_size': file_size, 'top_chars': top_chars}
 
 result = analyze_file('big.txt')
-print(result)
+
+print(result) # {'lines_count': 128457, 'file_size': 6488666, 'top_chars': ['e', 't', 'a']}
