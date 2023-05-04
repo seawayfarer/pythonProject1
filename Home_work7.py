@@ -13,17 +13,21 @@ def retry(attempts=5, desired_value=None):
         return wrapper
     return decorator
 
+
 @retry(desired_value=3)
 def get_random_value_with_default_attempts():
     return random.choice((1, 2, 3, 4, 5))
+
 
 @retry(desired_value=[1, 2])
 def get_random_values_with_default_attempts(choices, size=2):
     return random.choices(choices, k=size)
 
+
 @retry(attempts=7, desired_value=3)
 def get_random_value():
     return random.choice((1, 2, 3, 4, 5))
+
 
 @retry(attempts=2, desired_value=[1, 2, 3])
 def get_random_values(choices, size=2):
