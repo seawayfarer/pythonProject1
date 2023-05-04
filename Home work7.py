@@ -45,7 +45,8 @@ def copy_file(src_file_path, dest_file_path):
         with open(dest_file_path, 'w') as dest_file:
             dest_file.write(src_file.read())
 
-# examplecopy_file('path/to/source/file.txt', 'path/to/destination/file.txt')
+# example
+copy_file('path/to/source/file.txt', 'path/to/destination/file.txt')
 
 
 import os
